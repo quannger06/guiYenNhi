@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Great+Vibes&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top right, #fbc2eb, #a6c1ee);
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+audio {
+    display: none;
+}
+
+canvas#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.container {
+    margin-top: 10vh;
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1.typewriter {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    border-right: 3px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 2s;
+}
+
+.delay-2 {
+    animation-delay: 3s;
+}
+
+.delay-3 {
+    animation-delay: 4s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #ff6f91;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff3f6d;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: floatUp 3s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
